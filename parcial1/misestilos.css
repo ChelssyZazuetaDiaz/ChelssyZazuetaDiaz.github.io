@@ -21,4 +21,25 @@
     color: crimson;
     font-style: oblique;
     font-weight: 700;
+    padding: 20px;
+  }
+
+  #boton{
+    background-color: blueviolet;
+    border: none;
+    font-size: 30px;
+    width: 500px;
+    padding: 20px;
+    color: black;
+  }
+   .texto{
+      color: brown;
+  }
+
+  .link{
+    color: blue;
+  }
+
+  a:hover{
+      color: chartreuse;
   }
