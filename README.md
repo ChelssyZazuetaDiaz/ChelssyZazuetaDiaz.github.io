@@ -1,2 +1,3 @@
-# ChelssyZazuetaDiaz.github.io
-Zazueta Diaz Chelssy
+# Proyecto página web
+[PinkUP](https://pinkup.mx/)
+
