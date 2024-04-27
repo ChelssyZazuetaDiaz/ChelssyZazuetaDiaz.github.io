@@ -1,5 +1,5 @@
 # Proyecto página web
-[PinkUP](https://pinkup.mx/
+[PinkUP](https://pinkup.mx/)
 
-![Imagen PinkUP](pinkup/Captura de pantalla (1).png)
+![Imagen PinkUP](https://github.com/ChelssyZazuetaDiaz/ChelssyZazuetaDiaz.github.io/blob/main/pinkup/Captura%20de%20pantalla%20(1).png)
 
