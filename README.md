@@ -1,5 +1,5 @@
 # Proyecto página web
-[Dolphy](https://dolphy.com.mx/)
+[Pink Up](https://pinkup.mx/)
 
-![Imagen Dolphy](https://github.com/ChelssyZazuetaDiaz/ChelssyZazuetaDiaz.github.io/blob/main/pinkup/dolphy.png)
+![Imagen Pink Up](https://github.com/ChelssyZazuetaDiaz/ChelssyZazuetaDiaz.github.io/blob/main/pinkup/dolphy.png)
 
