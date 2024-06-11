@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-06-2024 a las 02:55:22
--- Versión del servidor: 10.1.39-MariaDB
--- Versión de PHP: 7.3.5
+-- Tiempo de generación: 11-06-2024 a las 03:57:18
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -89,7 +88,14 @@ INSERT INTO `canciones` (`id`, `nombre`, `genero_id`, `duracion`, `fecha`, `acti
 (5, 'Te odio', 2, '02:24:00', '2020-10-26', 1, 'foto 4\r\n'),
 (6, 'Tu Peor Pesadilla', 2, '02:21:00', '2022-10-16', 1, 'foto 5'),
 (7, 'Es Así', 2, '03:14:00', '2024-04-24', 1, 'foto 6'),
-(8, 'Aún No Me He Ido', 2, '03:32:00', '2020-02-14', 1, 'foto 6');
+(8, 'Aún No Me He Ido', 2, '03:32:00', '2020-02-14', 1, 'foto 7'),
+(9, 'Kwaheri', 2, '03:45:00', '2020-05-15', 1, 'foto 8'),
+(10, 'Nataka Nikuone', 2, '04:12:00', '2019-07-27', 1, 'foto 9\r\n'),
+(11, 'Nisaidie Kushare', 2, '03:58:00', '2018-09-10', 1, 'foto 10'),
+(12, 'Te Amo', 2, '04:20:00', '2014-06-09', 1, 'foto 11'),
+(13, 'Bonita', 2, '03:55:00', '2015-08-18', 1, 'foto 12'),
+(14, 'No Crezcas Más', 2, '04:02:00', '2016-12-05', 1, 'foto 13'),
+(15, 'Duele', 2, '03:30:00', '2017-03-22', 1, 'foto 14');
 
 -- --------------------------------------------------------
 
@@ -178,6 +184,13 @@ CREATE TABLE `playlists` (
   `descripcion` varchar(200) NOT NULL,
   `publico` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `playlists`
+--
+
+INSERT INTO `playlists` (`id`, `nombre`, `usuario_id`, `duracion`, `total_canciones`, `descripcion`, `publico`) VALUES
+(2, 'Kdramas', 1, '12:53:41', 15, 'Musica asiatica ', 19);
 
 -- --------------------------------------------------------
 
@@ -309,7 +322,7 @@ ALTER TABLE `artistas_canciones`
 -- AUTO_INCREMENT de la tabla `canciones`
 --
 ALTER TABLE `canciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `favoritos`
@@ -333,7 +346,7 @@ ALTER TABLE `membresias`
 -- AUTO_INCREMENT de la tabla `playlists`
 --
 ALTER TABLE `playlists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `playlists_canciones`
@@ -370,6 +383,12 @@ ALTER TABLE `canciones`
 ALTER TABLE `favoritos`
   ADD CONSTRAINT `favoritos_ibfk_1` FOREIGN KEY (`cancion_id`) REFERENCES `canciones` (`id`),
   ADD CONSTRAINT `favoritos_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
+
+--
+-- Filtros para la tabla `playlists`
+--
+ALTER TABLE `playlists`
+  ADD CONSTRAINT `playlists_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
 
 --
 -- Filtros para la tabla `usuarios`
