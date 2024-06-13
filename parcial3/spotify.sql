@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-06-2024 a las 03:57:18
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 8.1.10
+-- Tiempo de generación: 13-06-2024 a las 04:45:26
+-- Versión del servidor: 10.1.39-MariaDB
+-- Versión de PHP: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -46,7 +47,8 @@ INSERT INTO `artista` (`id`, `nombre`, `descripcion`) VALUES
 (7, 'Doris Day', 'Doris Mary Ann Kappelhoff nació el 3 de abril de 1922 en Cincinnati, Ohio. Su padre era profesor de música, director de coro y organista de iglesia. A su madre le encantaba la música popular, especialmente la música country. Tenía 12 años y Day vivía con su madre y su hermano mayor en Ohio.'),
 (8, 'Ella Fitzgerald', 'Reconocida mundialmente como \"La Primera Dama de la Canción\", Ella Fitzgerald es posiblemente la mejor vocalista de jazz de todos los tiempos. Bendecida con una voz muy resonante, un amplio rango y una elocución casi perfecta.'),
 (9, 'Snoop Dogg', 'Snoop Dogg, una de las figuras más icónicas que surgieron de la era del G-funk de principios de los 90, evolucionó más allá de sus inicios en el gangsta rap para convertirse en un adorable elemento de la cultura pop con incursiones en la televisión, el cine, el entrenamiento de fútbol y lucha libre.'),
-(10, 'Shakira', 'La cantautora colombiana Shakira ha vendido más de 80 millones de discos en todo el mundo y ganó numerosos premios, incluidos tres GRAMMY y once Latin GRAMMY.');
+(10, 'Shakira', 'La cantautora colombiana Shakira ha vendido más de 80 millones de discos en todo el mundo y ganó numerosos premios, incluidos tres GRAMMY y once Latin GRAMMY.'),
+(11, 'Marconi Union', 'Marconi Union es en realidad un grupo musical originario del Reino Unido, en lugar de un cantante individual. Está compuesto por Richard Talbot, Jamie Crossley y Duncan Meadows. Se formó en 2002 en Manchester, Inglaterra. ');
 
 -- --------------------------------------------------------
 
@@ -81,21 +83,25 @@ CREATE TABLE `canciones` (
 --
 
 INSERT INTO `canciones` (`id`, `nombre`, `genero_id`, `duracion`, `fecha`, `activo`, `foto`) VALUES
-(1, 'Malas Decisiones', 2, '02:19:00', '2022-10-26', 1, 'https://cdn2.excelsior.com.mx/800x600/filters:format(jpg):quality(75)/media/pictures/2024/03/13/3088'),
-(2, 'Rolling in the Deep', 2, '03:48:00', '2010-11-29', 1, 'foto 1'),
-(3, 'Por siempre', 2, '03:05:00', '2018-08-17', 1, 'foto 2'),
-(4, 'Tsunami', 2, '02:55:00', '2020-09-04', 1, 'foto 3'),
-(5, 'Te odio', 2, '02:24:00', '2020-10-26', 1, 'foto 4\r\n'),
-(6, 'Tu Peor Pesadilla', 2, '02:21:00', '2022-10-16', 1, 'foto 5'),
-(7, 'Es Así', 2, '03:14:00', '2024-04-24', 1, 'foto 6'),
-(8, 'Aún No Me He Ido', 2, '03:32:00', '2020-02-14', 1, 'foto 7'),
-(9, 'Kwaheri', 2, '03:45:00', '2020-05-15', 1, 'foto 8'),
-(10, 'Nataka Nikuone', 2, '04:12:00', '2019-07-27', 1, 'foto 9\r\n'),
-(11, 'Nisaidie Kushare', 2, '03:58:00', '2018-09-10', 1, 'foto 10'),
-(12, 'Te Amo', 2, '04:20:00', '2014-06-09', 1, 'foto 11'),
-(13, 'Bonita', 2, '03:55:00', '2015-08-18', 1, 'foto 12'),
-(14, 'No Crezcas Más', 2, '04:02:00', '2016-12-05', 1, 'foto 13'),
-(15, 'Duele', 2, '03:30:00', '2017-03-22', 1, 'foto 14');
+(1, 'Malas Decisiones', 2, '00:02:19', '2022-10-26', 1, 'https://cdn2.excelsior.com.mx/800x600/filters:format(jpg):quality(75)/media/pictures/2024/03/13/3088'),
+(2, 'Rolling in the Deep', 2, '00:03:48', '2010-11-29', 1, 'foto 1'),
+(3, 'Por siempre', 2, '00:03:05', '2018-08-17', 1, 'foto 2'),
+(4, 'Tsunami', 2, '00:02:55', '2020-09-04', 1, 'foto 3'),
+(5, 'Te odio', 2, '00:02:24', '2020-10-26', 1, 'foto 4\r\n'),
+(6, 'Tu Peor Pesadilla', 2, '00:02:21', '2022-10-16', 1, 'foto 5'),
+(7, 'Es Así', 2, '00:03:14', '2024-04-24', 1, 'foto 6'),
+(8, 'Aún No Me He Ido', 2, '00:03:32', '2020-02-14', 1, 'foto 7'),
+(9, 'Kwaheri', 2, '00:03:45', '2020-05-15', 1, 'foto 8'),
+(10, 'Nataka Nikuone', 2, '00:04:12', '2019-07-27', 1, 'foto 9\r\n'),
+(11, 'Nisaidie Kushare', 2, '00:03:58', '2018-09-10', 1, 'foto 10'),
+(12, 'Te Amo', 2, '00:04:20', '2014-06-09', 1, 'foto 11'),
+(13, 'Bonita', 2, '00:03:55', '2015-08-18', 1, 'foto 12'),
+(14, 'No Crezcas Más', 2, '00:04:02', '2016-12-05', 1, 'foto 13'),
+(15, 'Duele', 2, '00:03:30', '2017-03-22', 1, 'foto 14'),
+(16, 'Say yes', 12, '00:03:45', '2017-05-12', 1, 'foto 15'),
+(17, 'La Bachata', 9, '00:02:36', '2022-03-02', 1, 'foto 16'),
+(18, 'Weightless', 23, '00:08:10', '2011-11-16', 1, 'foto 17'),
+(19, 'a Parabólica', 11, '00:03:25', '1989-07-15', 1, 'foto 18');
 
 -- --------------------------------------------------------
 
@@ -108,6 +114,20 @@ CREATE TABLE `favoritos` (
   `usuario_id` int(11) NOT NULL,
   `cancion_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `favoritos`
+--
+
+INSERT INTO `favoritos` (`id`, `usuario_id`, `cancion_id`) VALUES
+(1, 1, 13),
+(2, 2, 17),
+(3, 3, 2),
+(4, 4, 1),
+(5, 5, 4),
+(6, 6, 12),
+(7, 7, 6),
+(8, 8, 14);
 
 -- --------------------------------------------------------
 
@@ -146,7 +166,8 @@ INSERT INTO `generos` (`id`, `nombre`) VALUES
 (19, 'Indie'),
 (20, 'Flamenco'),
 (21, 'Latina'),
-(22, 'Punk');
+(22, 'Punk'),
+(23, 'Ambient');
 
 -- --------------------------------------------------------
 
@@ -190,7 +211,8 @@ CREATE TABLE `playlists` (
 --
 
 INSERT INTO `playlists` (`id`, `nombre`, `usuario_id`, `duracion`, `total_canciones`, `descripcion`, `publico`) VALUES
-(2, 'Kdramas', 1, '12:53:41', 15, 'Musica asiatica ', 19);
+(1, 'Kdramas', 1, '10:00:00', 23, 'Música asiatica', 64),
+(2, 'Música para dormir', 2, '03:00:00', 10, 'Es música ambiental para relajarse o descansar.', 35);
 
 -- --------------------------------------------------------
 
@@ -204,6 +226,13 @@ CREATE TABLE `playlists_canciones` (
   `cancion_id` int(11) NOT NULL,
   `usuario_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `playlists_canciones`
+--
+
+INSERT INTO `playlists_canciones` (`id`, `playlist_id`, `cancion_id`, `usuario_id`) VALUES
+(1, 1, 16, 1);
 
 -- --------------------------------------------------------
 
@@ -232,7 +261,9 @@ INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `membresia_id`) VALUES
 (7, 'Oscar Del Rey', 'oscardelrey45@gmail.com', 3),
 (8, 'Azul Polanco', 'polancoazul300@hotmail.com', 2),
 (9, 'Miranda Comunica', 'comunicamirandaa@hotmail.com', 3),
-(10, 'Fernando Esquerra', 'esquerraescobarfernando@gmail.com', 1);
+(10, 'Fernando Esquerra', 'esquerraescobarfernando@gmail.com', 1),
+(11, 'Azul Contreras', 'contrerasazul@gmail.com', 2),
+(12, 'Ximena Polanco', 'ximenapolan45e@gmail.com', 3);
 
 --
 -- Índices para tablas volcadas
@@ -310,7 +341,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `artista`
 --
 ALTER TABLE `artista`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `artistas_canciones`
@@ -322,19 +353,19 @@ ALTER TABLE `artistas_canciones`
 -- AUTO_INCREMENT de la tabla `canciones`
 --
 ALTER TABLE `canciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `favoritos`
 --
 ALTER TABLE `favoritos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `generos`
 --
 ALTER TABLE `generos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `membresias`
@@ -352,13 +383,13 @@ ALTER TABLE `playlists`
 -- AUTO_INCREMENT de la tabla `playlists_canciones`
 --
 ALTER TABLE `playlists_canciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas
@@ -389,6 +420,14 @@ ALTER TABLE `favoritos`
 --
 ALTER TABLE `playlists`
   ADD CONSTRAINT `playlists_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
+
+--
+-- Filtros para la tabla `playlists_canciones`
+--
+ALTER TABLE `playlists_canciones`
+  ADD CONSTRAINT `playlists_canciones_ibfk_1` FOREIGN KEY (`cancion_id`) REFERENCES `canciones` (`id`),
+  ADD CONSTRAINT `playlists_canciones_ibfk_2` FOREIGN KEY (`playlist_id`) REFERENCES `playlists` (`id`),
+  ADD CONSTRAINT `playlists_canciones_ibfk_3` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
 
 --
 -- Filtros para la tabla `usuarios`
