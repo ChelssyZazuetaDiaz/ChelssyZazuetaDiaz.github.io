@@ -10,7 +10,7 @@
     <div class="container">
         <form action="practica4.php" method="POST">
             <div class="row">
-                <h1>Exámen de Inglés A1</h1><hr>
+                <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Exámen de Inglés A1</h1><hr>
                     <div class="card mb-4">
                         <div class="card-header">
                         1. Which sentence is correct?
@@ -23,21 +23,95 @@
                     </div>
                     <div class="card p-4 mb-4">
                         <p>
-                            2. Choose the correct form of the verb: <input type="text" name="pregunta2" required> He ___ to the gym every day.
+                            2. Choose the correct form of the verb: <input type="text" name="pregunta2" value="write" required> He ___ to the gym every day.
                         </p>
                     </div>
+                     
                     <div class="card mb-4">
                         <div class="card-header">
-                            Select the correct articles:
-                            I want _ apple and _ banana.
+                            3. Select the correct articles:
+                                                         I want _ apple and _ banana. (Select Two)
                         </div>
                         <div class="card-body">
-                            <p><input type="checkbox" name="pregunta3[]" value="A" >  A </p>
-                            <p><input type="checkbox" name="pregunta3[]" value="AN" > AN </p>
-                            <p><input type="checkbox" name="pregunta3[]" value="THE" > THE </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="A) a" > A) a </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="B) an" > B) an </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="C) the" > C) the </p>
                         </div>
                     </div>
             </div>
+
+                
+            <div class="card mb-4">
+                <div class="card-header">
+                4. Which sentence uses the past tense correctly?
+                </div>
+                <div class="card-body">
+                    <p><input type="radio" name="pregunta4" value="A) I see the movie yesterday." required> A) I see the movie yesterday. </p>
+                    <p><input type="radio" name="pregunta4" value="B) I saw the movie yesterday." required> B) I saw the movie yesterday. </p>
+                    <p><input type="radio" name="pregunta4" value="C) I seeing the movie yesterday." required > C) I seeing the movie yesterday. </p>
+                </div>
+            </div>
+
+            <div class="card p-4 mb-4">
+                <p>
+                    5. Choose the correct form of the verb to be: <input type="text" name="pregunta5"  required>  They ______ (be) playing soccer right now.
+                </p>
+            </div>
+            
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    6. Which of the following sentences are correct? (Select 2)
+                </div>
+                <div class="card-body">
+                    <p><input type="checkbox" name="pregunta6[]" value="A) He plays soccer." > A) He plays soccer. </p>
+                    <p><input type="checkbox" name="pregunta6[]" value="B) He play soccer." > B) He play soccer. </p>
+                    <p><input type="checkbox" name="pregunta6[]" value="C) He is playing soccer." > C) He is playing soccer. </p>
+                </div>
+            </div>
+              
+            <div class="card mb-4">
+                <div class="card-header">
+                7. What is the plural of "child"?
+                </div>
+                <div class="card-body">
+                    <p><input type="radio" name="pregunta7" value="A) Childs." required> A) Childs. </p>
+                    <p><input type="radio" name="pregunta7" value="B) Children." required> B) Children.</p>
+                    <p><input type="radio" name="pregunta7" value="C) Childes." required> C) Childes.</p>
+                </div>
+            </div>
+
+            <div class="card p-6 mb-2" ></div>
+                <p>
+                    8. Choose the correct form of the verb: <input type="text" name="pregunta8"  required>  He _______ (have) finished his homework already.
+                </p>
+            </div>
+            
+            
+            <div class="card mb-4" style="width: 84%; margin-left: 8%;"  >
+                <div class="card-header">
+                    9. Which of the following are correct prepositions? (Select 2)
+                </div>
+                <div class="card-body">
+                    <p><input type="checkbox" name="pregunta9[]" value="A) She is good at math." >A) She is good at math. </p>
+                    <p><input type="checkbox" name="pregunta9[]" value="B) She is good in math." >B) She is good in math. </p>
+                    <p><input type="checkbox" name="pregunta9[]" value="C) She is good with numbers." >C) She is good with numbers. </p>
+                </div>
+            </div>
+            
+            <div class="card mb-4" style="width: 84%; margin-left: 8%;">
+                <div class="card-header">
+                10. Choose the correct preposition:
+                She is interested _ learning Spanish
+                </div>
+                <div class="card-body">
+                    <p><input type="radio" name="pregunta10" value="A) in" required> A) in </p>
+                    <p><input type="radio" name="pregunta10" value="B) on" required> B) on</p>
+                    <p><input type="radio" name="pregunta10" value="C) at" required> C) at</p>
+                </div>
+            </div>
+
+
             <br><input type="submit" class="btn btn-primary" value="Terminar examen">
         </form>
     </div>
