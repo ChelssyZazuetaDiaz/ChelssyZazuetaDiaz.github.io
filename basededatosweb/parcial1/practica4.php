@@ -1,7 +1,7 @@
 <?php
 
 $aciertos = 0;
-
+$nombre = htmlspecialchars(trim($_POST['nombre']));
 $pregunta1 = $_POST["pregunta1"];
 $pregunta2 = $_POST["pregunta2"];
 $pregunta3 = $_POST["pregunta3"];
@@ -13,6 +13,8 @@ $pregunta8 = isset($_POST['pregunta8']) ? $_POST['pregunta8'] : null;
 $pregunta9 = isset($_POST['pregunta9']) ? $_POST['pregunta9'] : null;
 $pregunta10 = isset($_POST['pregunta10']) ? $_POST['pregunta10'] : null;
 
+echo "<h1>Resultados de $nombre</h1>";
+    
 
     
 // Valida pregunta 1. Which sentence is correct?
@@ -174,6 +176,14 @@ if ($pregunta10 == "A) in") {
 
 
 // Calificación final
-echo "CALIFICACIÓN FINAL = " . ($aciertos * 10) . "%";
+
+echo "CALIFICACIÓN FINAL = " . ($aciertos * 10) . "%"; 
+
+
+if ($aciertos <= 60) {
+    echo "<img src='goodjob.jpg' alt='Aprobado' width='200px' style='margin-top: 5px;' 'margin-left: 50px;' ><hr>";
+} else {
+    echo "<img src='goodluck.webp' alt='Reprobado' width='200px'>";
+}
 
 ?>

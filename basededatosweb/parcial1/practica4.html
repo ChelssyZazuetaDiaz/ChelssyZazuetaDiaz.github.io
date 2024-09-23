@@ -8,7 +8,13 @@
 </head>
 <body>
     <div class="container">
+        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Registro de Nombre</h1>
         <form action="practica4.php" method="POST">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Ingresa tu nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+            </div>
+
             <div class="row">
                 <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Exámen de Inglés A1</h1><hr>
                     <div class="card mb-4">
@@ -81,7 +87,7 @@
                 </div>
             </div>
 
-            <div class="card p-6 mb-2" ></div>
+            <div class="card mb-4" style="width: 90%; margin-left: 8%;" ></div>
                 <p>
                     8. Choose the correct form of the verb: <input type="text" name="pregunta8"  required>  He _______ (have) finished his homework already.
                 </p>
@@ -110,7 +116,8 @@
                     <p><input type="radio" name="pregunta10" value="C) at" required> C) at</p>
                 </div>
             </div>
-
+             
+            
 
             <br><input type="submit" class="btn btn-primary" value="Terminar examen">
         </form>
