@@ -146,12 +146,12 @@ if (is_array($pregunta9)) {
     $respuesta_seleccionada = htmlspecialchars($pregunta9);
 }
 
-echo "<h5>Respuesta seleccionada: " . $respuesta_seleccionada . " ---- Correcta = A) She is good at math. or C) She is good with numbers.</h5>";
+echo "<h5>Respuesta seleccionada: " . $respuesta_seleccionada . " ---- Correcta = A) She is good at math. or B) She is good in math. </h5>";
 $p9_respuestas_correctas = 0;
 
     if(count($pregunta9) == 2){
         for($i=0; $i<count($pregunta9); $i++){
-            if($pregunta9[$i] == "A) She is good at math." || $pregunta9[$i] == "C) She is good with numbers."){
+            if($pregunta9[$i] == "A) She is good at math." || $pregunta9[$i] == "B) She is good in math."){
                 $p9_respuestas_correctas ++;
             }
         }
@@ -178,12 +178,15 @@ if ($pregunta10 == "A) in") {
 // Calificación final
 
 echo "CALIFICACIÓN FINAL = " . ($aciertos * 10) . "%"; 
+echo "<hr>";
 
 
-if ($aciertos <= 60) {
-    echo "<img src='goodjob.jpg' alt='Aprobado' width='200px' style='margin-top: 5px;' 'margin-left: 50px;' ><hr>";
+
+if ($aciertos >= 6) {
+    echo "<img src='goodjob.jpg' alt='Aprobado' width='200px' style='margin-top: 5px; margin-left: 50px;'><hr>";
 } else {
     echo "<img src='goodluck.webp' alt='Reprobado' width='200px'>";
 }
+
 
 ?>
