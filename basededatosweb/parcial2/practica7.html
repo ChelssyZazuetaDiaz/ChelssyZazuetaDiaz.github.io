@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica 7. JavaScript</title>
     <script src="practica7.js"></script>
-    
 </head>
- <style>
+<style>
     input{
         font-size: 60px;
         max-width: 40px;
         background-color: pink;
     }
- </style>
+</style>
 <body>
     <h1>Práctica #7 JavaScript</h1>
 
-    <input type="text" onkeyup="validar(1)" id="cuadro1"> 
+    <input type="text" onkeyup="validar(1)" id="cuadro1">
     <input type="text" onkeyup="validar(2)" id="cuadro2">
     <input type="text" onkeyup="validar(3)" id="cuadro3"><br>
 
@@ -30,9 +28,10 @@
     <input type="text" onkeyup="validar(8)" id="cuadro8">
     <input type="text" onkeyup="validar(9)" id="cuadro9"><br>
 
+    <h1 id="ganador"></h1>
+    <button onclick="reiniciar()">REINICIAR JUEGO</button>
 
-   <h1 id="Ganador"></h1>
-    <h3>Zazueta Díaz Chelssy</h3>
+    <h3>Zazueta Diaz Chelssy</h3>
 
 </body>
 </html>
