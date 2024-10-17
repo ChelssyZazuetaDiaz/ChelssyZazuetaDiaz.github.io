@@ -24,4 +24,44 @@ $(document).ready(function (){
     }
   }
    });
+
+ cargaCartas();
+
+   function cargaCartas(){
+    var carta1 =0;
+    var carta2 =0;
+   let asignadas = new Array(54).fill(false);
+
+    while(carta1 < 16){
+    var num = Math.floor(Math.random()*54)+1;
+    if(asignadas[num-1] == false){
+      $('#carta1').append("<div class='col-sm-3'><img class='img-fluid'  src='img/"+num+".jpg'></div>")
+      asignadas[num-1]  = true;
+      carta1++;
+    }else{ 
+      continue;
+    
+         }
+
+     }
+
+   
+
+   asignadas = new Array(54).fill(false);
+
+    while(carta2 < 16){
+    var num = Math.floor(Math.random()*54)+1;
+    if(asignadas[num-1] == false){
+      $('#carta2').append("<div class='col-sm-3'><img class='img-fluid'  src='img/"+num+".jpg'></div>")
+      asignadas[num-1]  = true;
+      carta2++;
+    } else { 
+      continue;
+    
+         }
+
+     }
+
+   }
+
 });
